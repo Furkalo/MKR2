@@ -73,4 +73,9 @@ yarn-error.log
 *.pid
 *.seed
 *.pid.lock
-.idea
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
