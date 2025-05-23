@@ -21,18 +21,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Install system dependencies for Pillow
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libjpeg-dev zlib1g-dev
+        run: sudo apt-get update && sudo apt-get install -y libjpeg-dev zlib1g-dev
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest pytest-django
 
       - name: Create .env file for testing
         run: |
@@ -47,4 +44,4 @@ jobs:
       - name: Run tests
         env:
           DJANGO_SETTINGS_MODULE: project_gallery.settings
-        run: pytest
+        run: pytest --ds=project_gallery.settings
