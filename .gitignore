@@ -4,6 +4,7 @@
 # logs
 *.log
 
+.tests
 # IDE files
 .idea/
 *.iml
