@@ -41,7 +41,5 @@ jobs:
       - name: Run migrations
         run: python manage.py migrate
 
-      - name: Run tests
-        env:
-          DJANGO_SETTINGS_MODULE: project_gallery.settings
-        run: pytest --ds=project_gallery.settings
+      - name: Run pytest
+        run: pytest . -v --ds=project_gallery.settings
