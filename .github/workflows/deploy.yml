@@ -40,5 +40,5 @@ jobs:
 
       - name: Run tests
         env:
-          DJANGO_SETTINGS_MODULE: project_recipe.settings
+          DJANGO_SETTINGS_MODULE: project_gallery.settings
         run: pytest
